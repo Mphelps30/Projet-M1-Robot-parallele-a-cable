@@ -84,11 +84,13 @@ def afficher_schema(x, y, teta):
     print("Matrice des longueurs des câbles L :\n", Li)
     
     plt.title("Schéma robot parallèle à câbles")
+    plt.gca().axis('equal')
+    plt.grid()
 
     plt.show()
 
 # Réglages de x,y et teta
-nouveau_x = 0
-nouveau_y = 0
-angle_rotation = np.radians(0)
+nouveau_x = 2
+nouveau_y = 2
+angle_rotation = np.radians(30) #L'angle alpha est en degree puis convertie en radians
 afficher_schema(nouveau_x, nouveau_y, angle_rotation)
